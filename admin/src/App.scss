@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0.7rem;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.App-Container {
+  display: flex;
+  height: 97vh;
+  background: linear-gradient(to bottom right, white 0%, #e6e4ff 70%);
+  border-radius: 2rem;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    flex-direction: column;
+  }
+}

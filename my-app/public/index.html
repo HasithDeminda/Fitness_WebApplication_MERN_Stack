@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/desnqqj6a/image/upload/v1650175831/fitness_dmymhn.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>FIT Formula</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script>
+      let menu = document.querySelector("#menu-btn");
+      let navbar = document.querySelector(".header .navbar");
+
+      menu.onclick = () => {
+        menu.classList.toggle("fa-times");
+        navbar.classList.toggle("active");
+      };
+
+      window.onscroll = () => {
+        menu.classList.remove("fa-times");
+        navbar.classList.remove("active");
+      };
+
+      var swiper = new Swiper(".home-slider", {
+        spaceBetween: 20,
+        effect: "fade",
+        grabCursor: true,
+        loop: true,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      var swiper = new Swiper(".review-slider", {
+        spaceBetween: 20,
+        grabCursor: true,
+        loop: true,
+        autoplay: {
+          delay: 7500,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          600: {
+            slidesPerView: 2,
+          },
+        },
+      });
+
+      var swiper = new Swiper(".blogs-slider", {
+        spaceBetween: 20,
+        grabCursor: true,
+        loop: true,
+        autoplay: {
+          delay: 7500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          991: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
